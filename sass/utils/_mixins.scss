@@ -1,0 +1,28 @@
+@mixin flex-center($direction: row, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: $align;
+}
+
+@mixin flex-start($direction: row, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: $align;
+}
+
+@mixin bg-text-color($color: #fff) {
+  background: $color;
+  @if (lightness($color) > 60%) {
+    color: #000;  
+  } 
+  @else {
+    color: #fff;
+  }
+}
+
+@mixin section-styling($padding-tb: $padding-tb-section, $bd-color: #fff) {
+  padding: $padding-tb 0;
+  @include bg-text-color($bd-color);
+}

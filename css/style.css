@@ -1,0 +1,251 @@
+/* Color palette */
+/* Font sizes */
+/* Process section */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+button {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+h1, h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  padding: 1em 1.375em;
+  border-radius: 3.75em;
+  /* = btn height = 2x padding-top-bottom + font-size */
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: -1;
+}
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform ease-in-out 250ms;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.2rem 0 1.2rem;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+.header__img {
+  width: 43.7%;
+}
+
+.location {
+  height: 5rem;
+  background: #eaeaea;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.location__container {
+  width: 43.7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.location__label {
+  margin-right: 1.5rem;
+}
+.location__input {
+  background: inherit;
+  max-width: 14rem;
+  overflow: visible;
+  font-size: 1.5rem;
+  padding: 0.3125rem 0 0.3125rem 0.3125rem;
+}
+
+.showcase {
+  padding: 4rem 0;
+  background: #F6F6F6;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.showcase > * {
+  text-align: center;
+}
+.showcase__container {
+  width: 81%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.showcase h1 {
+  width: 85%;
+}
+.showcase__subtitle {
+  margin: 1.5rem 0;
+}
+.showcase .btn {
+  margin: 1.5rem;
+}
+
+.process {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background: #fff;
+  color: #000;
+}
+.process__container {
+  width: 90%;
+}
+.process__title {
+  margin-bottom: 3rem;
+}
+.process__list {
+  counter-reset: my-counter;
+  width: 100%;
+  margin: 1.8rem 0;
+  padding-left: 0.775em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2.4rem;
+}
+.process__step {
+  counter-increment: my-counter;
+  position: relative;
+  width: 100%;
+}
+.process__step:hover {
+  transform: scale(1.05);
+  transition: transform ease-in-out 250ms;
+}
+.process__step::before {
+  content: counter(my-counter);
+  font-size: inherit;
+  position: absolute;
+  width: 1.55em;
+  height: 1.55em;
+  left: 0px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+}
+.process__step__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1.5rem;
+  background: #F6F6F6;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 3.5rem;
+  border-radius: 1em;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.process__step p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.process__step i {
+  width: 1.5em;
+  color: #7e7e7e;
+}
+.process__step--highlight a {
+  background: #f2eafb;
+}
+.process__step--highlight i {
+  color: #9356DC;
+}
+
+.restaurants {
+  padding: 5rem 0;
+  background: #F6F6F6;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurants__container {
+  width: 90%;
+}
+
+/*# sourceMappingURL=style.css.map */

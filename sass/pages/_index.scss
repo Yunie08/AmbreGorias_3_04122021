@@ -1,0 +1,125 @@
+
+.location {
+  height: 5rem;
+  background: darken($neutral-color-light, 4.6%);
+  @include flex-center;
+  &__container {
+    width: 43.7%;
+    @include flex-center;
+  }
+  &__label {
+    margin-right: 1.5rem;
+  }
+  &__input {
+    background: inherit;
+    max-width: 14rem;
+    overflow: visible;
+    font-size: 1.5rem;
+    padding: 0.3125rem 0 0.3125rem 0.3125rem;
+    // text-align: center;
+  }
+}
+
+.showcase {
+  @include section-styling($padding-tb: 4rem, $bd-color:$neutral-color-light);
+
+  @include flex-center;
+  > * {
+    text-align: center;
+  }
+  &__container {
+    width: 81%;
+    @include flex-center(column);
+  }
+  h1 {
+    width: 85%;
+  }
+  &__subtitle {
+    margin: 1.5rem 0;
+  }
+  .btn {
+    margin: 1.5rem;
+  }
+}
+
+.process {
+  @include flex-center;
+  @include section-styling;
+
+  &__container {
+    width: $container-width;
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__list {
+    counter-reset: my-counter;
+    width: 100%;
+    margin: 1.8rem 0;
+    padding-left: calc($step-number-size /2);
+    @include flex-start(column);
+    row-gap: 2.4rem;
+  }
+  &__step {
+    counter-increment: my-counter;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform ease-in-out 250ms;
+    }
+
+    &::before{
+      content: counter(my-counter);
+      font-size: inherit;
+      position:absolute;
+      width: $step-number-size;
+      height: $step-number-size;
+      left: 0px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include flex-center;
+      @include bg-text-color($primary-color);
+      border-radius: 50%;
+    }
+
+    &__info {
+      @include flex-start; 
+      column-gap: 1.5rem;
+      background: $neutral-color-light;
+      width: 100%;
+      height: 100%;
+      padding: 2.5rem 3.5rem;
+      border-radius: 1em;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+
+    }
+    p {
+      font-size: map-get($map: $font-sizes, $key: main);
+      font-weight: 700;
+    }
+    i {
+      width: 1.5em;
+      color: darken($neutral-color-light, 47%)
+    }
+
+    &--highlight {
+      a {
+        background: lighten($primary-color, 35%);
+      }
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.restaurants {
+  @include section-styling($bd-color:$neutral-color-light);
+  @include flex-center(column);
+  &__container {
+    width: $container-width;
+  }
+
+}

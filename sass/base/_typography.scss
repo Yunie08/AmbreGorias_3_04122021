@@ -1,0 +1,14 @@
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: map-get($map: $font-sizes, $key: main);
+}
+
+h1, h2 {
+  font-size: map-get($map: $font-sizes, $key: titles);
+  font-weight: 700;
+}
+
+p {
+  font-size: map-get($map: $font-sizes, $key: subtitles);
+  font-weight: 300;
+}

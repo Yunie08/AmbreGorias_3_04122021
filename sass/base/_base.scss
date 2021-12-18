@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // 10px div by def of 16px
+  font-size: 62.5%;
+}
+
+input,
+button {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol, 
+ul {
+    list-style: none;
+}

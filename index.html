@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ohmyfood | Accueil</title>
+</head>
+<body>
+  <header class="header">
+    <img class="header__img" src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+  </header>
+  <form class="location" action="#">
+    <div class="location__container">
+    <label for="location" class="location__label">
+      <i class="fas fa-map-marker-alt"></i>
+    </label>
+    <input type="text" name="location" id="location" class="location__input" value="Paris, Belleville">
+    </div>
+  </form>
+  <main>
+    <section class="showcase">
+      <div class="showcase__container">
+        <h1 class="showcase__title">Réservez le menu qui vous convient</h1>
+        <p class="showcase__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="btn">Explorer nos restaurants</button>
+      </div>
+    </section>
+    <section class="process">
+      <div class="process__container">
+        <h2 class="process__title">Fonctionnement</h2>
+        <ol type="1" class="process__list">
+          <li class="process__step">
+            <a class="process__step__info" href="#">
+              <i class="fas fa-mobile-alt"></i>
+              <p>Choisissez un restaurant</p>
+            </a>
+          </li>
+          <li class="process__step">
+            <a class="process__step__info" href="#">
+              <i class="fas fa-list-ul"></i>
+              <p>Composez votre menu</p>
+            </a>
+          </li>
+          <li class="process__step process__step--highlight">
+            <a class="process__step__info" href="#">
+              <i class="fas fa-store"></i>
+              <p>Dégustez au restaurant</p>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="restaurants">
+      <div class="restaurants__container">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <div class="restaurants__list">
+          <div class="card card--new">
+            <img class="card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+            <div class="card__content">
+              <div class="card__text">
+                <h3 class="card__title">La palette du goût</h3>
+                <p class="card__byline">Ménilmontant</p>
+              </div>
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
