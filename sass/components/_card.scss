@@ -1,0 +1,57 @@
+.card {
+  display: block;
+  width: 100%;
+  height: calc(75vw - (100vw - 90vw));
+  max-height: 37.5vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #fff;
+  @include shadow;
+  transition: all ease 500ms; 
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform ease-in-out 250ms;
+    @include shadow(0.3);
+  }
+
+  &__img {
+    max-height: 70%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 1rem;
+    min-height: 30%;
+    width: 93%;
+    margin: auto;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  i {
+    padding: 1rem;
+  }
+
+  &--new {
+    position: relative;
+    &::after {
+      content: "Nouveau";
+      color: darken($tertiary-color,35%);
+      font-weight: 500;
+      font-size: 1.4rem;
+      background: $tertiary-color;
+      padding: 1rem 1.2rem;
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      border-radius: 0.2rem;
+    }
+  }
+}

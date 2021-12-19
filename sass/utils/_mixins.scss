@@ -26,3 +26,22 @@
   padding: $padding-tb 0;
   @include bg-text-color($bd-color);
 }
+
+@mixin pseudo-element-syntax {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin btn-after-no-hover {
+  opacity: 0;
+  transition: all 600ms;
+  z-index: -1;
+}
+
+@mixin shadow($opacity: $shadow-opacity) {
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,$opacity);
+}

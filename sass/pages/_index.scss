@@ -50,7 +50,7 @@
     width: $container-width;
   }
   &__title {
-    margin-bottom: 3rem;
+    margin-bottom: $margin-b-h2;
   }
   &__list {
     counter-reset: my-counter;
@@ -90,9 +90,9 @@
       background: $neutral-color-light;
       width: 100%;
       height: 100%;
-      padding: 2.5rem 3.5rem;
+      padding: 2.5rem 2rem 2.5rem 3.5rem;
       border-radius: 1em;
-      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+      @include shadow(0.15);
 
     }
     p {
@@ -121,5 +121,54 @@
   &__container {
     width: $container-width;
   }
+  &__title {
+    margin-bottom: $margin-b-h2;
+  }
+  &__list {
+    @include flex-center(column);
+    row-gap: 1.8rem;
+  }
+}
 
+
+.btn--like {
+  i {
+    font-size: 2.4rem;
+  }
+  position: relative;
+  z-index: 1;
+  &::after {
+    @include flex-center;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f004";
+    font-size: 2.4rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: -webkit-linear-gradient(50deg,#FF79DA 0%,#9356DC 70%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity ease-out 600ms, transform ease-out 300ms;
+    
+    // @include btn-after-no-hover;
+    z-index: 2;
+    
+  }
+  &:hover {
+    i {
+      opacity: 0;
+      transition: opacity ease-in 50ms;
+    }
+    &::after {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform ease-out 200ms, opacity ease-out 200ms;
+    }
+  }
 }
