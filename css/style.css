@@ -96,13 +96,15 @@ p {
 .card {
   display: block;
   width: 100%;
-  height: 65vw;
-  max-height: 37.5vh;
   border-radius: 1.5rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   transition: all ease 500ms;
+}
+.card--index {
+  height: 65vw;
+  max-height: 37.5vh;
 }
 .card:hover {
   transition: all ease-in-out 250ms;
@@ -422,11 +424,33 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-right: calc(4rem - 10%);
+  margin-bottom: 3.5rem;
 }
 .menu h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-size: 2.6rem;
   line-height: 1;
+}
+.menu__categories {
+  display: flex;
+  flex-direction: column;
+}
+.menu h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.menu h2::after {
+  content: "";
+  height: 0.3rem;
+  width: 4rem;
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,10 +19,35 @@
 
   &__header {
     @include flex-between;
+    padding-right: calc($padding-tb-menu - (100% - $container-width));
+    margin-bottom: 3.5rem;
   }
   h1 {
     font-family: "Shrikhand", Arial, Helvetica, sans-serif;
     font-size: 2.6rem;
     line-height: 1;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 2.5rem;
+    
+    &::after {
+      content:"";
+      height: 0.3rem;
+      width: 4rem;
+      background: $tertiary-color;
+      position: absolute;
+      left: 0;
+      bottom: -0.8rem;
+    }
   }
 }
