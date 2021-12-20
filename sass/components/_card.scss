@@ -1,14 +1,15 @@
 .card {
   display: block;
   width: 100%;
-  height: calc(75vw - (100vw - 90vw));
-  max-height: 37.5vh;
   border-radius: 1.5rem;
   overflow: hidden;
   background: #fff;
   @include shadow;
   transition: all ease 500ms; 
-
+  &--index {
+    height: calc(75vw - (100vw - 90vw));
+    max-height: 37.5vh;
+  }
   &:hover {
     transition: all ease-in-out 250ms;
     @include shadow(0.3);
