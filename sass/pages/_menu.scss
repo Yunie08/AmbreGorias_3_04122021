@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    height: 68vw;
+    max-height: 38vh;
+    width: 100%;
+  }
+  &__content {
+    width: 100%;
+    @include flex-center(column);
+    margin-top: -1 * $padding-tb-menu;
+    @include section-styling($padding-tb-menu);
+    border-radius: $padding-tb-menu;
+  }
+  &__container {
+    width: $container-width;    
+  }
+
+  &__header {
+    @include flex-between;
+  }
+  h1 {
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+}

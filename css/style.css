@@ -1,6 +1,7 @@
 /* Color palette */
 /* Font sizes */
 /* Process section */
+/* Menu */
 *,
 *::after,
 *::before {
@@ -104,8 +105,7 @@ p {
   transition: all ease 500ms;
 }
 .card:hover {
-  transform: scale(1.05);
-  transition: transform ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .card__img {
@@ -141,6 +141,47 @@ p {
   top: 1.2rem;
   right: 1.2rem;
   border-radius: 0.2rem;
+}
+
+.btn--like {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.btn--like i {
+  font-size: 2.4rem;
+}
+.btn--like::after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2.4rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: -webkit-linear-gradient(50deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity ease-out 600ms, transform ease-out 300ms;
+  z-index: 2;
+}
+.btn--like:hover i {
+  opacity: 0;
+  transition: opacity ease-in 200ms;
+}
+.btn--like:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform ease-out 200ms, opacity ease-out 200ms;
 }
 
 .header {
@@ -352,44 +393,40 @@ p {
   row-gap: 1.8rem;
 }
 
-.btn--like {
-  position: relative;
-  z-index: 1;
-}
-.btn--like i {
-  font-size: 2.4rem;
-}
-.btn--like::after {
+.menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+.menu__img {
+  height: 68vw;
+  max-height: 38vh;
+  width: 100%;
+}
+.menu__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 2.4rem;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: -webkit-linear-gradient(50deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(0);
-  opacity: 0;
-  transition: opacity ease-out 600ms, transform ease-out 300ms;
-  z-index: 2;
+  margin-top: -4rem;
+  padding: 4rem 0;
+  background: #fff;
+  color: #000;
+  border-radius: 4rem;
 }
-.btn--like:hover i {
-  opacity: 0;
-  transition: opacity ease-in 50ms;
+.menu__container {
+  width: 90%;
 }
-.btn--like:hover::after {
-  opacity: 1;
-  transform: scale(1);
-  transition: transform ease-out 200ms, opacity ease-out 200ms;
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu h1 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
