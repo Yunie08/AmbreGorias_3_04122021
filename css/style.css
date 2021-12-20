@@ -157,6 +157,11 @@ p {
 .header__img {
   width: 43.7%;
 }
+.header--menu i {
+  position: absolute;
+  left: 6%;
+  top: 45%;
+}
 
 .footer {
   padding: 2.5rem 0;
