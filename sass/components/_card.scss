@@ -10,8 +10,7 @@
   transition: all ease 500ms; 
 
   &:hover {
-    transform: scale(1.05);
-    transition: transform ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
     @include shadow(0.3);
   }
 
