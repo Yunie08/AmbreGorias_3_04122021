@@ -21,7 +21,7 @@
 
 @mixin bg-text-color($color: #fff) {
   background: $color;
-  @if (lightness($color) > 60%) {
+  @if (lightness($color) > 80%) {
     color: #000;  
   } 
   @else {

@@ -1,5 +1,6 @@
 /* Color palette */
 /* Font sizes */
+/* Cards */
 /* Process section */
 /* Menu */
 *,
@@ -48,16 +49,16 @@ body {
 }
 
 h1, h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 p {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -403,6 +404,7 @@ p {
   height: 68vw;
   max-height: 38vh;
   width: 100%;
+  object-fit: cover;
 }
 .menu__content {
   width: 100%;
@@ -414,7 +416,8 @@ p {
   padding: 4rem 0;
   background: #fff;
   color: #000;
-  border-radius: 4rem;
+  border-radius: 4rem 4rem 0 0;
+  background: #F6F6F6;
 }
 .menu__container {
   width: 90%;
@@ -432,18 +435,21 @@ p {
   font-size: 2.6rem;
   line-height: 1;
 }
-.menu__categories {
-  display: flex;
-  flex-direction: column;
+.menu .btn--like::after {
+  top: -1px;
 }
-.menu h2 {
+
+.category {
+  margin-top: 4.5rem;
+}
+.category h2 {
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: 400;
   position: relative;
   margin-bottom: 2.5rem;
 }
-.menu h2::after {
+.category h2::after {
   content: "";
   height: 0.3rem;
   width: 4rem;
@@ -451,6 +457,72 @@ p {
   position: absolute;
   left: 0;
   bottom: -0.8rem;
+}
+.category__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.menu__item__content {
+  height: 6.8rem;
+  align-items: center;
+  width: calc(100% + 6rem);
+}
+.menu__item__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 6rem);
+  padding: 0 1.5rem 0 2rem;
+}
+.menu__item__price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding: 0 1rem;
+  transition: all ease 400ms;
+}
+.menu__item__check {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  color: #fff;
+  height: 100%;
+  min-width: 6rem;
+  transition: all ease 400ms;
+}
+.menu__item__text {
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__item__title, .menu__item__byline {
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__item__content:hover .menu__item__text {
+  margin-right: 4.5rem;
+  transition: all ease 400ms;
+}
+.menu__item__content:hover .menu__item__check {
+  transform: translateX(-100%);
+  transition: transform ease 400ms;
+}
+.menu__item__content:hover i {
+  transform: rotate(1turn);
+  transition: transform 400ms;
+}
+.menu__item__content:hover .menu__item__price {
+  transform: translateX(-4.5rem);
+  transition: transform ease 350ms 50ms;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,10 +9,10 @@ $neutral-color-dark: #353535;
 $font-sizes : (
   main: 1.6rem,
   inputs: 1.4rem,
-  titles: 2.2rem,
-  subtitles: 1.7rem,
-  card-titles: 1.8rem,
-  card-text: 1.7rem
+  titles: 2.3rem,
+  subtitles: 1.8rem,
+  card-titles: 1.6rem,
+  card-text: 1.5rem
 );
 
 $margin-b-h2: 3rem;
@@ -21,6 +21,8 @@ $padding-tb-section: 5rem;
 
 $shadow-opacity: 0.2;
 
+/* Cards */
+$card-bd-radius: 1.5rem;
 /* Process section */
 $step-number-size : 1.55em;
 

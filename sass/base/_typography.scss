@@ -13,6 +13,6 @@ h3 {
 }
 
 p {
-  font-size: map-get($map: $font-sizes, $key: subtitles);
+  font-size: map-get($map: $font-sizes, $key: card-text);
   font-weight: 300;
 }
