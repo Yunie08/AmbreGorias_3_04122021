@@ -104,8 +104,7 @@ p {
   transition: all ease 500ms;
 }
 .card--index {
-  height: 65vw;
-  max-height: 37.5vh;
+  height: 37.5vh;
 }
 .card:hover {
   transition: all ease-in-out 250ms;
@@ -261,6 +260,8 @@ p {
   max-width: 14rem;
   overflow: visible;
   font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
   padding: 0.3125rem 0 0.3125rem 0.3125rem;
 }
 
@@ -320,6 +321,7 @@ p {
   row-gap: 2.4rem;
 }
 .process__step {
+  font: inherit;
   counter-increment: my-counter;
   position: relative;
   width: 100%;
@@ -330,7 +332,7 @@ p {
 }
 .process__step::before {
   content: counter(my-counter);
-  font-size: inherit;
+  font-size: 1.4rem;
   position: absolute;
   width: 1.55em;
   height: 1.55em;

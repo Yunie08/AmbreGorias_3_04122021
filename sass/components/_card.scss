@@ -7,8 +7,8 @@
   @include shadow;
   transition: all ease 500ms; 
   &--index {
-    height: calc(75vw - (100vw - 90vw));
-    max-height: 37.5vh;
+    // height: calc(75vw - (100vw - 90vw));
+    height: 37.5vh;
   }
   &:hover {
     transition: all ease-in-out 250ms;
