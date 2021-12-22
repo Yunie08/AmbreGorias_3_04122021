@@ -15,6 +15,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
 input,
 button {
   font: inherit;
@@ -527,61 +532,115 @@ p {
   transition: transform ease 350ms 50ms;
 }
 
-.loader {
-  height: 100vh;
+.loading {
+  position: fixed;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: rgba(153, 226, 208, 0.2);
+  background: #e8f9f5;
+  animation: loading 3.5s linear both;
 }
 
-.logo {
-  -webkit-text-stroke: 2px #FFF;
-  color: #9356DC;
-  font: calc(3.2rem + 3vw) "Shrikhand";
-  animation: anim-shadow 3s both infinite;
+.index {
+  animation: lock-main 3.5s linear both;
 }
 
-span {
-  display: inline-block;
-  animation: exclamation-appear 3s infinite both;
+.loader {
+  fill: none;
+  width: 80%;
+  max-width: 500px;
+  stroke-width: 3px;
+  animation: scale-up 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(1) {
+  stroke-dasharray: 215;
+  stroke-dashoffset: 215;
+  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(2) {
+  stroke-dasharray: 346;
+  stroke-dashoffset: 346;
+  animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(3) {
+  stroke-dasharray: 455;
+  stroke-dashoffset: 455;
+  animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(4) {
+  stroke-dasharray: 337;
+  stroke-dashoffset: 337;
+  animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(5) {
+  stroke-dasharray: 282;
+  stroke-dashoffset: 282;
+  animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(6) {
+  stroke-dasharray: 282;
+  stroke-dashoffset: 282;
+  animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(7) {
+  stroke-dasharray: 282;
+  stroke-dashoffset: 282;
+  animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+}
+.loader path:nth-child(8) {
+  stroke-dasharray: 254;
+  stroke-dashoffset: 254;
+  animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
 }
 
-@keyframes exclamation-appear {
+@keyframes loading {
+  0%, 90% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+@keyframes lock-main {
+  0%, 99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
+@keyframes color-change {
+  0%, 30% {
+    stroke: #FF79DA;
+  }
+  100% {
+    stroke: #9356DC;
+  }
+}
+@keyframes full-logo {
   0% {
-    transform: scale(0);
+    stroke: #9356DC;
+    fill: transparent;
   }
-  60% {
-    transform: scale(0);
-  }
-  75% {
-    transform: scale(1);
+  100% {
+    stroke-width: 2px;
+    stroke: black;
+    fill: #000;
   }
 }
-@keyframes anim-shadow {
-  0%, 20% {
-    color: #9356DC;
-    text-shadow: 1px 1px #9356DC, 2px 2px #9356DC, 3px 3px #9356DC, 4px 4px #9356DC, 5px 5px #9356DC, 6px 6px #9356DC, 7px 7px #9356DC, 9px 9px #9356DC, 10px 10px #9356DC, 11px 11px #9356DC, 12px 12px #9356DC;
-    font-size: calc(3.2rem + 3vw);
+@keyframes scale-up {
+  to {
+    transform: scale(1.1);
   }
-  21%, 40% {
-    color: #99E2D0;
-    text-shadow: 1px 1px #99E2D0, 2px 2px #99E2D0, 3px 3px #99E2D0, 4px 4px #99E2D0, 5px 5px #99E2D0, 6px 6px #99E2D0, 7px 7px #99E2D0, 8px 8px #99E2D0, 9px 9px #9356DC, 10px 10px #9356DC, 11px 11px #9356DC, 12px 12px #9356DC;
-    font-size: calc(3.8rem + 3vw);
-  }
-  41%, 60% {
-    color: #FF79DA;
-    text-shadow: 1px 1px #FF79DA, 2px 2px #FF79DA, 3px 3px #FF79DA, 4px 4px #FF79DA, 5px 5px #99E2D0, 6px 6px #99E2D0, 7px 7px #99E2D0, 8px 8px #99E2D0, 9px 9px #9356DC, 10px 10px #9356DC, 11px 11px #9356DC, 12px 12px #9356DC;
-    -webkit-text-stroke: 2px #FFF;
-    font-size: calc(4.2rem + 3vw);
-  }
-  75%, 100% {
-    -webkit-text-stroke: 2px transparent;
-    color: #000;
-    text-shadow: none;
-    font-size: calc(4.2rem + 3vw);
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
