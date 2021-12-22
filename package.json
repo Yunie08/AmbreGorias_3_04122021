@@ -4,8 +4,10 @@
   "description": "Openclassrooms project 3 - Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:css/style.css"
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "prefix": "postcss css/style.css --use autoprefixer -d prefixed/"
   },
   "author": "Ambre Gorias",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 2 versions"
 }
