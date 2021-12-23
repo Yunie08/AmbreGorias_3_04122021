@@ -52,3 +52,16 @@
 @mixin shadow($opacity: $shadow-opacity) {
   box-shadow: 0 5px 10px 0 rgba(0,0,0,$opacity);
 }
+
+
+@mixin tablet-up {
+  @media screen and (min-width: map-get($breakpoints,tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints,desktop)) {
+    @content;
+  }
+}

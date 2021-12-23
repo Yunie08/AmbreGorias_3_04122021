@@ -15,6 +15,13 @@ $font-sizes : (
   card-text: 1.5rem
 );
 
+/* Breakpoints */
+$breakpoints:(
+  tablet: 768px,
+  desktop: 991px
+);
+
+
 $margin-b-h2: 3rem;
 $container-width: 90%;
 $padding-tb-section: 5rem;
