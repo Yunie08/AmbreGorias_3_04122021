@@ -2,11 +2,12 @@
 @import "utils/mixins";
 @import "base/base";
 @import "base/typography";
+@import "components/loader";
 @import "components/button";
 @import "components/card";
 @import "components/like";
+@import "components/menu-items";
 @import "layouts/header";
 @import "layouts/footer";
 @import "pages/index";
 @import "pages/menu";
-@import "components/loader";

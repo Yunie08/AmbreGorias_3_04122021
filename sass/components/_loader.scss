@@ -4,11 +4,11 @@
   width: 100%;
   @include flex-center;
   background: lighten($tertiary-color,20%);
-  animation: loading 3.5s linear both;
+  animation: loading 3s linear both;
 }
 
 .index {
-  animation: lock-main 3.5s linear both;
+  animation: lock-main 3s linear both;
 }
 
 .loader {
