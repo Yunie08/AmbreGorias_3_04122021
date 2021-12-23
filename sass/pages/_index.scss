@@ -1,4 +1,4 @@
-
+/***** Location form *****/
 .location {
   height: 5rem;
   background: darken($neutral-color-light, 4.6%);
@@ -22,6 +22,7 @@
   }
 }
 
+/***** Showcase area *****/
 .showcase {
   @include section-styling($padding-tb: 4rem, $bd-color:$neutral-color-light);
 
@@ -44,6 +45,7 @@
   }
 }
 
+/***** Process *****/
 .process {
   @include flex-center;
   @include section-styling;
@@ -55,18 +57,28 @@
     margin-bottom: $margin-b-h2;
   }
   &__list {
-    counter-reset: my-counter;
+    counter-reset: my-counter; /* using custom counter */
     width: 100%;
     margin: 1.8rem 0;
     padding-left: calc($step-number-size /2);
     @include flex-start(column);
     row-gap: 2.4rem;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 3%;
+    }
   }
   &__step {
     font: inherit;
-    counter-increment: my-counter;
+    counter-increment: my-counter; /* using custom counter */
     position: relative;
     width: 100%;
+
+    @include desktop {
+      max-width: 35rem;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -74,7 +86,7 @@
     }
 
     &::before{
-      content: counter(my-counter);     
+      content: counter(my-counter); /* using custom counter */  
       font-size: 1.4rem;
       position:absolute;
       width: $step-number-size;
@@ -118,6 +130,7 @@
   }
 }
 
+/***** Restaurants list layout *****/
 .restaurants {
   @include section-styling($bd-color:$neutral-color-light);
   @include flex-center(column);
@@ -130,7 +143,15 @@
   &__list {
     @include flex-center(column);
     row-gap: 1.8rem;
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2%;
+    }
   }
+
+  
 }
 
 
