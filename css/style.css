@@ -94,42 +94,42 @@ p {
 .loader path:nth-child(1) {
   stroke-dasharray: 215;
   stroke-dashoffset: 215;
-  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards;
 }
 .loader path:nth-child(2) {
   stroke-dasharray: 346;
   stroke-dashoffset: 346;
-  animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards;
 }
 .loader path:nth-child(3) {
   stroke-dasharray: 455;
   stroke-dashoffset: 455;
-  animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards;
 }
 .loader path:nth-child(4) {
   stroke-dasharray: 337;
   stroke-dashoffset: 337;
-  animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards;
 }
 .loader path:nth-child(5) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards;
 }
 .loader path:nth-child(6) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards;
 }
 .loader path:nth-child(7) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards;
 }
 .loader path:nth-child(8) {
   stroke-dasharray: 254;
   stroke-dashoffset: 254;
-  animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards;
 }
 
 @keyframes loading {
