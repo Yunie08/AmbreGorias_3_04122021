@@ -50,7 +50,7 @@
     width: $container-width;
   }
   &__container {
-    max-width: 100%;
+    width: 100%;
     
     @include desktop {
       display: grid;

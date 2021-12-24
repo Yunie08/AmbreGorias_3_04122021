@@ -717,7 +717,7 @@ Animation explanation :
   width: 90%;
 }
 .category__container {
-  max-width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 991px) {
   .category__container {
