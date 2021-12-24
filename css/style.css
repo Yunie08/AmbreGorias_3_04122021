@@ -308,6 +308,7 @@ Animation explanation :
 - each category appears with a delay depending on their own "child number"
 - each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
 */
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -315,6 +316,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -322,6 +324,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -329,6 +332,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.4s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -336,6 +340,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.6s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -343,6 +348,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.8s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -350,6 +356,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -357,6 +364,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -364,6 +372,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.4s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -371,6 +380,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.6s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -378,6 +388,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.8s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -385,6 +396,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -723,26 +735,61 @@ Animation explanation :
 
 .menu__item {
   display: block;
+  /*
+  &__content {
+    &:hover{
+      .menu__item__text {
+        margin-right: 4.5rem;
+        transition: all ease 400ms;
+      }
+      .menu__item__check {
+        transform: translateX(-100%); 
+        transition: transform ease 400ms;
+      }
+      i {
+        transform: rotate(1turn);
+        transition: transform 400ms ;
+      }
+      .menu__item__price {
+        transform: translateX(-4.5rem);
+        transition: transform ease 350ms 50ms;
+      }
+    }
+  }
+  */
 }
 .menu__item__content {
   height: 6.8rem;
   align-items: center;
-  width: calc(100% + 6rem);
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+}
+.menu__item__content:hover {
+  overflow: visible;
+}
+.menu__item__content:hover .menu__item__main {
+  min-width: calc(100% - 6rem + 1.5rem);
+  transition: min-width 400ms ease-out;
+}
+.menu__item__content:hover i {
+  transform: rotate(1turn);
+  transition: transform 400ms;
 }
 .menu__item__main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 6rem);
-  padding: 0 1.5rem 0 2rem;
+  min-width: calc(100% + 1.5rem);
+  transition: min-width 0.4s;
 }
 .menu__item__price {
   font-weight: 700;
   font-size: 1.5rem;
   justify-self: flex-end;
   align-self: flex-end;
-  padding: 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   transition: all ease 400ms;
 }
 .menu__item__check {
@@ -754,7 +801,6 @@ Animation explanation :
   color: #fff;
   height: 100%;
   min-width: 6rem;
-  transition: all ease 400ms;
 }
 .menu__item__text {
   flex-shrink: 1;
@@ -767,22 +813,6 @@ Animation explanation :
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu__item__content:hover .menu__item__text {
-  margin-right: 4.5rem;
-  transition: all ease 400ms;
-}
-.menu__item__content:hover .menu__item__check {
-  transform: translateX(-100%);
-  transition: transform ease 400ms;
-}
-.menu__item__content:hover i {
-  transform: rotate(1turn);
-  transition: transform 400ms;
-}
-.menu__item__content:hover .menu__item__price {
-  transform: translateX(-4.5rem);
-  transition: transform ease 350ms 50ms;
 }
 
 /*# sourceMappingURL=style.css.map */
