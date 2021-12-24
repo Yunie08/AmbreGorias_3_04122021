@@ -710,9 +710,20 @@ Animation explanation :
 /* Menu category -entrée, plats, desserts- */
 .category {
   margin-top: 4.5rem;
+  width: 100%;
+}
+.category__wrapper {
+  width: 90%;
 }
 .category__container {
-  width: 90%;
+  max-width: 100%;
+}
+@media screen and (min-width: 991px) {
+  .category__container {
+    display: grid;
+    grid-template-columns: repeat(3, 32.667%);
+    column-gap: 1%;
+  }
 }
 .category h2 {
   text-transform: uppercase;
@@ -734,35 +745,15 @@ Animation explanation :
   display: flex;
   flex-direction: column;
   row-gap: 2vh;
+  width: 100%;
 }
 
 /* Individual menu cards */
 .menu__item {
   display: block;
-  /*
-  &__content {
-    &:hover{
-      .menu__item__text {
-        margin-right: 4.5rem;
-        transition: all ease 400ms;
-      }
-      .menu__item__check {
-        transform: translateX(-100%); 
-        transition: transform ease 400ms;
-      }
-      i {
-        transform: rotate(1turn);
-        transition: transform 400ms ;
-      }
-      .menu__item__price {
-        transform: translateX(-4.5rem);
-        transition: transform ease 350ms 50ms;
-      }
-    }
-  }
-  */
 }
 .menu__item__content {
+  width: 100%;
   height: 6.8rem;
   align-items: center;
   display: flex;
@@ -774,7 +765,7 @@ Animation explanation :
   overflow: visible;
 }
 .menu__item__content:hover .menu__item__main {
-  min-width: calc(100% - 6rem + 1.5rem);
+  min-width: calc(100% - 6rem);
   transition: min-width 400ms ease-out;
 }
 .menu__item__content:hover i {
@@ -786,8 +777,9 @@ Animation explanation :
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-width: calc(100% + 1.5rem);
+  min-width: 100%;
   transition: min-width 0.4s;
+  padding: 0 3%;
 }
 .menu__item__price {
   font-weight: 700;
