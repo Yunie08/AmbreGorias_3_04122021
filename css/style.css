@@ -221,14 +221,15 @@ p {
   transition: all ease 500ms;
 }
 .card--index {
-  height: 37.5vh;
+  height: 65vw;
+  max-height: 37.5vh;
 }
 .card:hover {
   transition: all ease-in-out 250ms;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .card__img {
-  max-height: 70%;
+  height: 70%;
   width: 100%;
   object-fit: cover;
 }
