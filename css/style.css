@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Color palette */
 /* Font sizes */
 /* Breakpoints */
@@ -94,42 +95,42 @@ p {
 .loader path:nth-child(1) {
   stroke-dasharray: 215;
   stroke-dashoffset: 215;
-  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards;
 }
 .loader path:nth-child(2) {
   stroke-dasharray: 346;
   stroke-dashoffset: 346;
-  animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards;
 }
 .loader path:nth-child(3) {
   stroke-dasharray: 455;
   stroke-dashoffset: 455;
-  animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards;
 }
 .loader path:nth-child(4) {
   stroke-dasharray: 337;
   stroke-dashoffset: 337;
-  animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards;
 }
 .loader path:nth-child(5) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards;
 }
 .loader path:nth-child(6) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards;
 }
 .loader path:nth-child(7) {
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards;
 }
 .loader path:nth-child(8) {
   stroke-dasharray: 254;
   stroke-dashoffset: 254;
-  animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards, full-logo 0.5s 2.5s ease forwards;
+  animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards;
 }
 
 @keyframes loading {
@@ -309,6 +310,7 @@ Animation explanation :
 - each category appears with a delay depending on their own "child number"
 - each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
 */
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -316,6 +318,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -323,6 +326,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -330,6 +334,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.4s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
@@ -337,6 +342,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.6s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -344,6 +350,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 0.8s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -351,6 +358,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -358,6 +366,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
@@ -365,6 +374,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.4s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -372,6 +382,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.6s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -379,6 +390,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 1.8s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -386,6 +398,7 @@ Animation explanation :
   animation: menu-item-anim 0.6s 2s ease-out both;
 }
 
+/* -1 so that the 1st element has no delay applied */
 .category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
@@ -651,6 +664,7 @@ Animation explanation :
   }
 }
 
+/* Top of the page - menu name & like button */
 .menu {
   display: flex;
   flex-direction: column;
@@ -694,11 +708,23 @@ Animation explanation :
   top: -1px;
 }
 
+/* Menu category -entrée, plats, desserts- */
 .category {
   margin-top: 4.5rem;
+  width: 100%;
+}
+.category__wrapper {
+  width: 90%;
 }
 .category__container {
-  width: 90%;
+  max-width: 100%;
+}
+@media screen and (min-width: 991px) {
+  .category__container {
+    display: grid;
+    grid-template-columns: repeat(3, 32.667%);
+    column-gap: 1%;
+  }
 }
 .category h2 {
   text-transform: uppercase;
@@ -720,30 +746,48 @@ Animation explanation :
   display: flex;
   flex-direction: column;
   row-gap: 2vh;
+  width: 100%;
 }
 
+/* Individual menu cards */
 .menu__item {
   display: block;
 }
 .menu__item__content {
+  width: 100%;
   height: 6.8rem;
   align-items: center;
-  width: calc(100% + 6rem);
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+  /* hover animation */
+}
+.menu__item__content:hover {
+  overflow: visible;
+}
+.menu__item__content:hover .menu__item__main {
+  min-width: calc(100% - 6rem);
+  transition: min-width 400ms ease-out;
+}
+.menu__item__content:hover i {
+  transform: rotate(1turn);
+  transition: transform 400ms;
 }
 .menu__item__main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 6rem);
-  padding: 0 1.5rem 0 2rem;
+  min-width: 100%;
+  transition: min-width 0.4s;
+  padding: 0 3%;
 }
 .menu__item__price {
   font-weight: 700;
   font-size: 1.5rem;
   justify-self: flex-end;
   align-self: flex-end;
-  padding: 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   transition: all ease 400ms;
 }
 .menu__item__check {
@@ -755,7 +799,6 @@ Animation explanation :
   color: #fff;
   height: 100%;
   min-width: 6rem;
-  transition: all ease 400ms;
 }
 .menu__item__text {
   flex-shrink: 1;
@@ -768,22 +811,6 @@ Animation explanation :
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu__item__content:hover .menu__item__text {
-  margin-right: 4.5rem;
-  transition: all ease 400ms;
-}
-.menu__item__content:hover .menu__item__check {
-  transform: translateX(-100%);
-  transition: transform ease 400ms;
-}
-.menu__item__content:hover i {
-  transform: rotate(1turn);
-  transition: transform 400ms;
-}
-.menu__item__content:hover .menu__item__price {
-  transform: translateX(-4.5rem);
-  transition: transform ease 350ms 50ms;
 }
 
 /*# sourceMappingURL=style.css.map */

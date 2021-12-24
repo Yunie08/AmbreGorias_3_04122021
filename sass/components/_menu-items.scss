@@ -7,8 +7,8 @@ Animation explanation :
 
 @for $i from 1 through 3 {
   @for $a from 1 through 4 {
-    $category-delay: calc((-1 + $i)*0.8s);
-    $menu-item-delay: calc($category-delay + (-1 + $a)*0.2s);
+    $category-delay: calc((-1 + $i)*0.8s);   /* -1 so that the 1st element has no delay applied */
+    $menu-item-delay: calc($category-delay + (-1 + $a)*0.2s); 
     .category__container :nth-child(#{$i}) {
       h2 {
       animation: category-anim 0.8s $category-delay both;
