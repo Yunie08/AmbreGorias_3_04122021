@@ -308,87 +308,87 @@ Animation explanation :
 - each category appears with a delay depending on their own "child number"
 - each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
 */
-.category:nth-child(2) h2 {
+.category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
-.category:nth-child(2) .category__list :nth-child(1).menu__item {
+.category__container :nth-child(1) .category__list :nth-child(1).menu__item {
   animation: menu-item-anim 0.6s 0s ease-out both;
 }
 
-.category:nth-child(2) h2 {
+.category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
-.category:nth-child(2) .category__list :nth-child(2).menu__item {
+.category__container :nth-child(1) .category__list :nth-child(2).menu__item {
   animation: menu-item-anim 0.6s 0.2s ease-out both;
 }
 
-.category:nth-child(2) h2 {
+.category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
-.category:nth-child(2) .category__list :nth-child(3).menu__item {
+.category__container :nth-child(1) .category__list :nth-child(3).menu__item {
   animation: menu-item-anim 0.6s 0.4s ease-out both;
 }
 
-.category:nth-child(2) h2 {
+.category__container :nth-child(1) h2 {
   animation: category-anim 0.8s 0s both;
 }
-.category:nth-child(2) .category__list :nth-child(4).menu__item {
+.category__container :nth-child(1) .category__list :nth-child(4).menu__item {
   animation: menu-item-anim 0.6s 0.6s ease-out both;
 }
 
-.category:nth-child(3) h2 {
+.category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
-.category:nth-child(3) .category__list :nth-child(1).menu__item {
+.category__container :nth-child(2) .category__list :nth-child(1).menu__item {
   animation: menu-item-anim 0.6s 0.8s ease-out both;
 }
 
-.category:nth-child(3) h2 {
+.category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
-.category:nth-child(3) .category__list :nth-child(2).menu__item {
+.category__container :nth-child(2) .category__list :nth-child(2).menu__item {
   animation: menu-item-anim 0.6s 1s ease-out both;
 }
 
-.category:nth-child(3) h2 {
+.category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
-.category:nth-child(3) .category__list :nth-child(3).menu__item {
+.category__container :nth-child(2) .category__list :nth-child(3).menu__item {
   animation: menu-item-anim 0.6s 1.2s ease-out both;
 }
 
-.category:nth-child(3) h2 {
+.category__container :nth-child(2) h2 {
   animation: category-anim 0.8s 0.8s both;
 }
-.category:nth-child(3) .category__list :nth-child(4).menu__item {
+.category__container :nth-child(2) .category__list :nth-child(4).menu__item {
   animation: menu-item-anim 0.6s 1.4s ease-out both;
 }
 
-.category:nth-child(4) h2 {
+.category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
-.category:nth-child(4) .category__list :nth-child(1).menu__item {
+.category__container :nth-child(3) .category__list :nth-child(1).menu__item {
   animation: menu-item-anim 0.6s 1.6s ease-out both;
 }
 
-.category:nth-child(4) h2 {
+.category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
-.category:nth-child(4) .category__list :nth-child(2).menu__item {
+.category__container :nth-child(3) .category__list :nth-child(2).menu__item {
   animation: menu-item-anim 0.6s 1.8s ease-out both;
 }
 
-.category:nth-child(4) h2 {
+.category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
-.category:nth-child(4) .category__list :nth-child(3).menu__item {
+.category__container :nth-child(3) .category__list :nth-child(3).menu__item {
   animation: menu-item-anim 0.6s 2s ease-out both;
 }
 
-.category:nth-child(4) h2 {
+.category__container :nth-child(3) h2 {
   animation: category-anim 0.8s 1.6s both;
 }
-.category:nth-child(4) .category__list :nth-child(4).menu__item {
+.category__container :nth-child(3) .category__list :nth-child(4).menu__item {
   animation: menu-item-anim 0.6s 2.2s ease-out both;
 }
 
@@ -673,9 +673,6 @@ Animation explanation :
   border-radius: 4rem 4rem 0 0;
   background: #F6F6F6;
 }
-.menu__container {
-  width: 90%;
-}
 .menu__header {
   display: flex;
   flex-direction: row;
@@ -683,6 +680,9 @@ Animation explanation :
   align-items: center;
   padding-right: calc(4rem - 10%);
   margin-bottom: 3.5rem;
+}
+.menu__header__container {
+  width: 90%;
 }
 .menu h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
@@ -695,6 +695,9 @@ Animation explanation :
 
 .category {
   margin-top: 4.5rem;
+}
+.category__container {
+  width: 90%;
 }
 .category h2 {
   text-transform: uppercase;
