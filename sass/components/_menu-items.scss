@@ -1,5 +1,12 @@
+/*
+Animation explanation :
+- each category appears with a delay depending on their own "child number"
+- each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
+*/
+
+
 @for $i from 2 through 4 {
-  @for $a from 1 through 3  {
+  @for $a from 1 through 4 {
     $category-delay: calc((-2 + $i)*0.8s);
     $menu-item-delay: calc($category-delay + (-1 + $a)*0.2s);
     .category:nth-child(#{$i}) {
