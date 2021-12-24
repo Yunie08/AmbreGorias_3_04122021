@@ -1,0 +1,36 @@
+@for $i from 2 through 4 {
+  @for $a from 1 through 3  {
+    $category-delay: calc((-2 + $i)*0.8s);
+    $menu-item-delay: calc($category-delay + (-1 + $a)*0.2s);
+    .category:nth-child(#{$i}) {
+      h2 {
+      animation: category-anim 0.8s $category-delay both;
+      }
+      .category__list :nth-child(#{$a}).menu__item {
+        animation: menu-item-anim 0.6s $menu-item-delay ease-out both;
+      }
+    }
+  } 
+}
+
+@keyframes category-anim {
+  0%{
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-item-anim {
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
