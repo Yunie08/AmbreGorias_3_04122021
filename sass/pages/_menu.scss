@@ -1,3 +1,4 @@
+/* Top of the page - menu name & like button */
 .menu {
   display: flex;
   flex-direction: column;
@@ -17,7 +18,6 @@
     background: $neutral-color-light;
   }
   
-
   &__header {
     @include flex-between;
     padding-right: calc($padding-tb-menu - (100% - $container-width));
@@ -27,6 +27,7 @@
       width: $container-width;    
     }
   }
+
   h1 {
     font-family: "Shrikhand", Arial, Helvetica, sans-serif;
     font-size: 2.6rem;
@@ -40,11 +41,14 @@
   }
 }
 
+/* Menu category -entrée, plats, desserts- */
 .category {
   margin-top: 4.5rem;
+
   &__container {
     width: $container-width;   
   }
+
   h2 {
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -70,8 +74,10 @@
   }
 }
 
+/* Individual menu cards */
 .menu__item {
   display: block;
+
   &__content {
     height: 6.8rem;
     align-items: center;
@@ -79,13 +85,15 @@
     justify-content: space-between;
     overflow: visible;
 
-
+    /* hover animation */
     &:hover{
       overflow: visible;
+
       .menu__item__main {
         min-width: calc(100% - 6rem + $card-bd-radius);
         transition: min-width 400ms ease-out;
       }
+
       i {
         transform: rotate(1turn);
         transition: transform 400ms ;
@@ -95,11 +103,8 @@
   }
   &__main {
     @include flex-between;
-    // width: calc(100% - 6rem);
-    // padding: 0 0 0 2rem;
     min-width: calc(100% + $card-bd-radius);
     transition: min-width 0.4s;
-    
   }
 
   &__price {
@@ -130,31 +135,5 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  /*
-  &__content {
-    &:hover{
-      .menu__item__text {
-        margin-right: 4.5rem;
-        transition: all ease 400ms;
-      }
-      .menu__item__check {
-        transform: translateX(-100%); 
-        transition: transform ease 400ms;
-      }
-      i {
-        transform: rotate(1turn);
-        transition: transform 400ms ;
-      }
-      .menu__item__price {
-        transform: translateX(-4.5rem);
-        transition: transform ease 350ms 50ms;
-      }
-    }
-  }
-  */
-
-
-  
+  }  
 }
