@@ -21,7 +21,6 @@
   &__header {
     @include flex-between;
     padding-right: calc($padding-tb-menu - (100% - $container-width));
-    margin-bottom: 3.5rem;
     
     &__container {
       width: $container-width;
@@ -36,7 +35,7 @@
 
   .btn--like {
     &::after {
-      top: -1px;
+      top: -0.5px;
     }
   }
 }
@@ -54,8 +53,8 @@
     
     @include desktop {
       display: grid;
-      grid-template-columns: repeat(3, 32.667%);
-      column-gap: 1%;
+      grid-template-columns: repeat(3, 31.333%);
+      column-gap: 3%;
     }
   }
 
@@ -128,7 +127,7 @@
     padding: 0 $card-bd-radius 0 1rem;
     transition: all ease 400ms;
   }
-  
+
   &__check {
     @include flex-center;
     @include bg-text-color($tertiary-color);

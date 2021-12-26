@@ -707,7 +707,6 @@ Animation explanation :
   justify-content: space-between;
   align-items: center;
   padding-right: calc(4rem - 10%);
-  margin-bottom: 3.5rem;
 }
 .menu__header__container {
   width: 90%;
@@ -718,7 +717,7 @@ Animation explanation :
   line-height: 1;
 }
 .menu .btn--like::after {
-  top: -1px;
+  top: -0.5px;
 }
 
 /* Menu category -entrée, plats, desserts- */
@@ -735,8 +734,8 @@ Animation explanation :
 @media screen and (min-width: 991px) {
   .category__container {
     display: grid;
-    grid-template-columns: repeat(3, 32.667%);
-    column-gap: 1%;
+    grid-template-columns: repeat(3, 31.333%);
+    column-gap: 3%;
   }
 }
 .category h2 {
