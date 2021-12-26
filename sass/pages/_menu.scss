@@ -91,13 +91,11 @@
 
   &__content {
     width: 100%;
-
     height: 6.8rem;
     align-items: center;
     display: flex;
     justify-content: space-between;
     overflow: visible;
-
 
     /* hover animation */
     &:hover{
@@ -113,14 +111,13 @@
         transition: transform 400ms ;
       }
     }
-    
   }
+
   &__main {
     @include flex-between;
     min-width: 100%;
     transition: min-width 0.4s;
     padding: 0 3%;
-
   }
 
   &__price {
@@ -131,6 +128,7 @@
     padding: 0 $card-bd-radius 0 1rem;
     transition: all ease 400ms;
   }
+  
   &__check {
     @include flex-center;
     @include bg-text-color($tertiary-color);
