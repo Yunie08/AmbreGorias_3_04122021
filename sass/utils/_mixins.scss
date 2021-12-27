@@ -1,3 +1,8 @@
+@mixin container-setting($cont-width: $container-width, $cont-max-width: $content-max-width) {
+  width: $cont-width;
+  max-width: $cont-max-width;
+}
+
 @mixin flex-center($direction: row, $align: center) {
   display: flex;
   flex-direction: $direction;

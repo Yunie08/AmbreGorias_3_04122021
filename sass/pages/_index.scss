@@ -32,6 +32,7 @@
   }
   &__container {
     width: 81%;
+    max-width: $content-max-width;
     @include flex-center(column);
   }
   h1 {
@@ -51,7 +52,7 @@
   @include section-styling;
 
   &__container {
-    width: $container-width;
+    @include container-setting;
   }
   &__title {
     margin-bottom: $margin-b-h2;
@@ -148,7 +149,7 @@
   @include section-styling($bd-color:$neutral-color-light);
   @include flex-center(column);
   &__container {
-    width: $container-width;
+    @include container-setting;
   }
   &__title {
     margin-bottom: $margin-b-h2;

@@ -1,12 +1,14 @@
 .footer {
   @include section-styling($padding-tb: 2.5rem, $bd-color: $neutral-color-dark);
   @include flex-center;
-  &__container {
-    width: $container-width; 
 
+  &__container {
+    @include container-setting;
   }
+
   &__img {
     width: 33%;
+    max-width: 20rem;
     filter: invert(100%);
     margin-bottom: 2rem;
   }
@@ -21,5 +23,4 @@
     display: flex;
     column-gap: 1rem;
   }
-
 }

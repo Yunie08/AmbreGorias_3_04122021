@@ -24,6 +24,7 @@
     
     &__container {
       width: $container-width;
+      max-width: $content-max-width;
     }
   }
 
@@ -46,7 +47,7 @@
   width: 100%;
 
   &__wrapper {
-    width: $container-width;
+    @include container-setting;
   }
   &__container {
     width: 100%;
