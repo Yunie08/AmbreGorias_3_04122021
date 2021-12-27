@@ -651,7 +651,7 @@ Animation explanation :
 }
 @media screen and (min-width: 991px) {
   .process__step {
-    max-width: 35rem;
+    max-width: 40rem;
   }
 }
 .process__step::before {
@@ -691,12 +691,12 @@ Animation explanation :
 }
 .process__step__info::after {
   content: "";
-  background: #f2eafb;
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f2eafb;
   z-index: -1;
   opacity: 0;
 }
