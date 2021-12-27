@@ -17,8 +17,16 @@
   max-width: 500px;
   stroke-width: 3px;
   animation: scale-up 0.5s 2.5s ease forwards;
-  // animation: color-change 3s ease both;
-    // animation: anim-shadow 2.5s 3s  infinite;
+
+  @for $i from 1 through length($letter-length) {
+    $delay: delay($i,$letter-delay);
+    path:nth-child(#{$i}) {
+      stroke-dasharray: nth($letter-length, $i);
+      stroke-dashoffset: nth($letter-length, $i);
+      animation: line-anim $letter-duration $delay ease forwards, color-change $letter-duration $delay ease-in forwards;
+    }
+  }
+  /*
   path:nth-child(1) {
     stroke-dasharray: 215;
     stroke-dashoffset: 215;
@@ -67,8 +75,10 @@
     animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards;
     // , full-logo 0.5s 2.5s ease forwards;
   }
+  */
 }
 
+/* Make loader appear and disappear */
 @keyframes loading {
   0%,90% {
     opacity: 1;
@@ -80,6 +90,7 @@
   }
 }
 
+/* No scroll on main page during loading animation */
 @keyframes lock-main {
   0%,99%{
     overflow: hidden;
@@ -89,6 +100,7 @@
   }
 }
 
+/* Letter color animation */
 @keyframes color-change {
   0%,30% {
     stroke: $secondary-color;
@@ -98,6 +110,7 @@
   }
 }
 
+/* Makes logo fully filled */
 @keyframes full-logo {
   0% {
     stroke: $primary-color;
@@ -116,6 +129,9 @@
   }
 }
 
+/* Makes line appear
+Prerequisite : stroke-dasharray and dashoffset must be set at full path length 
+*/
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;

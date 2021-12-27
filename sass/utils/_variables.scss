@@ -37,3 +37,22 @@ $step-number-size : 1.55em;
 
 /* Menu */
 $padding-tb-menu: 4rem;
+
+/* Loader */
+$letter-duration: 1s;
+$letter-delay: 0.2s;
+
+/* 
+Length of svg logo letters
+From first to last letter
+*/
+$letter-length:
+  215,
+  346,
+  455,
+  337,
+  282,
+  282,
+  282,
+  254
+;

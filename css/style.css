@@ -5,6 +5,12 @@
 /* Cards */
 /* Process section */
 /* Menu */
+/* Loader */
+/* 
+Length of svg logo letters
+From first to last letter
+*/
+/* Compute delay depending on element index/position and set delay between each element */
 *,
 *::after,
 *::before {
@@ -91,11 +97,61 @@ p {
   max-width: 500px;
   stroke-width: 3px;
   animation: scale-up 0.5s 2.5s ease forwards;
+  /*
+  path:nth-child(1) {
+    stroke-dasharray: 215;
+    stroke-dashoffset: 215;
+    animation: line-anim 1s ease forwards, color-change 1s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(2) {
+    stroke-dasharray: 346;
+    stroke-dashoffset: 346;
+    animation: line-anim 1s 0.2s ease forwards, color-change 1s 0.2s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(3) {
+    stroke-dasharray: 455;
+    stroke-dashoffset: 455;
+    animation: line-anim 1s 0.4s ease forwards, color-change 1s 0.4s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  } 
+  path:nth-child(4) {
+    stroke-dasharray: 337;
+    stroke-dashoffset: 337;
+    animation: line-anim 1s 0.6s ease forwards, color-change 1s 0.6s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(5) {
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    animation: line-anim 1s 0.8s ease forwards, color-change 1s 0.8s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(6) {
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    animation: line-anim 1s 1s ease forwards, color-change 1s 1s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(7) {
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    animation: line-anim 1s 1.2s ease forwards, color-change 1s 1.2s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  path:nth-child(8) {
+    stroke-dasharray: 254;
+    stroke-dashoffset: 254;
+    animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards;
+    // , full-logo 0.5s 2.5s ease forwards;
+  }
+  */
 }
 .loader path:nth-child(1) {
   stroke-dasharray: 215;
   stroke-dashoffset: 215;
-  animation: line-anim 1s ease forwards, color-change 1s ease-in forwards;
+  animation: line-anim 1s 0s ease forwards, color-change 1s 0s ease-in forwards;
 }
 .loader path:nth-child(2) {
   stroke-dasharray: 346;
@@ -133,6 +189,7 @@ p {
   animation: line-anim 1s 1.4s ease forwards, color-change 1s 1.4s ease-in forwards;
 }
 
+/* Make loader appear and disappear */
 @keyframes loading {
   0%, 90% {
     opacity: 1;
@@ -143,6 +200,7 @@ p {
     z-index: -1000;
   }
 }
+/* No scroll on main page during loading animation */
 @keyframes lock-main {
   0%, 99% {
     overflow: hidden;
@@ -151,6 +209,7 @@ p {
     overflow: auto;
   }
 }
+/* Letter color animation */
 @keyframes color-change {
   0%, 30% {
     stroke: #FF79DA;
@@ -159,6 +218,7 @@ p {
     stroke: #9356DC;
   }
 }
+/* Makes logo fully filled */
 @keyframes full-logo {
   0% {
     stroke: #9356DC;
@@ -175,6 +235,9 @@ p {
     transform: scale(1.1);
   }
 }
+/* Makes line appear
+Prerequisite : stroke-dasharray and dashoffset must be set at full path length 
+*/
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;
@@ -186,9 +249,11 @@ p {
   padding: 1em 1.375em;
   border-radius: 3.75em;
   /* = btn height = 2x padding-top-bottom + font-size */
+  overflow: hidden;
   position: relative;
   z-index: 1;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow ease 250ms;
 }
 .btn::after {
   content: "";
@@ -204,9 +269,8 @@ p {
   z-index: -1;
 }
 .btn:hover {
-  transform: scale(1.05);
-  transition: transform ease-in-out 250ms;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow ease 250ms;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.14);
 }
 .btn:hover::after {
   opacity: 1;
@@ -227,7 +291,7 @@ p {
 }
 .card:hover {
   transition: all ease-in-out 250ms;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card__img {
   height: 70%;

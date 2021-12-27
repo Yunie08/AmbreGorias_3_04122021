@@ -1,0 +1,5 @@
+/* Compute delay depending on element index/position and set delay between each element */
+@function delay($position, $delay) {
+  $result: ($position - 1) * $delay;
+  @return $result;
+}
