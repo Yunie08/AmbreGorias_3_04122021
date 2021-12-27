@@ -3,9 +3,11 @@
   color: #fff;
   padding: 1em 1.375em;
   border-radius: 3.75em; /* = btn height = 2x padding-top-bottom + font-size */
+  overflow: hidden;
   position: relative;
   z-index: 1;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+  transition: box-shadow ease 250ms;
 
   &::after {
     @include pseudo-element-syntax;
@@ -15,9 +17,9 @@
     
   }
   &:hover {
-    transform: scale(1.05);
-    transition: transform ease-in-out 250ms;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    // transform: scale(1.05);
+    transition: box-shadow ease 250ms;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,20%), 0 10px 20px 0 rgb(0,0,0,14%);
     &::after {
     opacity: 1;
     }
