@@ -748,6 +748,11 @@ Animation explanation :
     column-gap: 2%;
   }
 }
+@media screen and (min-width: 991px) {
+  .restaurants__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 /* Top of the page - menu name & like button */
 .menu {

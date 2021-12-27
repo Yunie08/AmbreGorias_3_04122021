@@ -3,13 +3,16 @@
   height: 5rem;
   background: darken($neutral-color-light, 4.6%);
   @include flex-center;
+
   &__container {
     width: 43.7%;
     @include flex-center;
   }
+
   &__label {
     margin-right: 1.5rem;
   }
+
   &__input {
     background: inherit;
     max-width: 14rem;
@@ -25,22 +28,26 @@
 /***** Showcase area *****/
 .showcase {
   @include section-styling($padding-tb: 4rem, $bd-color:$neutral-color-light);
-
   @include flex-center;
+
   > * {
     text-align: center;
   }
+
   &__container {
     width: 81%;
     max-width: $content-max-width;
     @include flex-center(column);
   }
+
   h1 {
     width: 85%;
   }
+
   &__subtitle {
     margin: 1.5rem 0;
   }
+
   .btn {
     margin: 1.5rem;
   }
@@ -54,9 +61,11 @@
   &__container {
     @include container-setting;
   }
+
   &__title {
     margin-bottom: $margin-b-h2;
   }
+
   &__list {
     counter-reset: my-counter; /* using custom counter */
     width: 100%;
@@ -71,6 +80,7 @@
       column-gap: 3%;
     }
   }
+
   &__step {
     font: inherit;
     counter-increment: my-counter; /* using custom counter */
@@ -128,10 +138,12 @@
       }
 
     }
+
     p {
       font-size: map-get($map: $font-sizes, $key: main);
       font-weight: 700;
     }
+
     i {
       width: 1.5em;
       color: darken($neutral-color-light, 47%)
@@ -143,12 +155,15 @@
 .restaurants {
   @include section-styling($bd-color:$neutral-color-light);
   @include flex-center(column);
+
   &__container {
     @include container-setting;
   }
+
   &__title {
     margin-bottom: $margin-b-h2;
   }
+
   &__list {
     @include flex-center(column);
     row-gap: 1.8rem;
@@ -158,9 +173,10 @@
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2%;
     }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
-
-  
 }
 
 
