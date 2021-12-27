@@ -14,6 +14,7 @@
     @include flex-center(column);
     margin-top: -1 * $padding-tb-menu;
     @include section-styling($padding-tb-menu);
+    padding-bottom: 8rem;
     border-radius: $padding-tb-menu $padding-tb-menu 0 0;
     background: $neutral-color-light;
   }
