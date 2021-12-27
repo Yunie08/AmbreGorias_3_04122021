@@ -10,6 +10,7 @@
 Length of svg logo letters
 From first to last letter
 */
+/* Media queries */
 /* Compute delay depending on element index/position and set delay between each element */
 /* -1 so that the 1st element has no delay applied */
 *,

@@ -23,8 +23,7 @@
     padding-right: calc($padding-tb-menu - (100% - $container-width));
     
     &__container {
-      width: $container-width;
-      max-width: $content-max-width;
+      @include container-setting;
     }
   }
 
