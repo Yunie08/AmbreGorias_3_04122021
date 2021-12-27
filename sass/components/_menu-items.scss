@@ -7,14 +7,16 @@ Animation explanation :
 
 @for $i from 1 through 3 {
   @for $a from 1 through 4 {
-    $category-delay: calc((-1 + $i)*0.8s);   /* -1 so that the 1st element has no delay applied */
-    $menu-item-delay: calc($category-delay + (-1 + $a)*0.2s); 
+    /* delay function caculates delay for categories and items */
+    $category-delay: delay($i,$menu-category-delay);   
+    $item-delay: calc($category-delay + delay($i,$menu-item-delay)); 
+
     .category__container :nth-child(#{$i}) {
       h2 {
       animation: category-anim 0.8s $category-delay both;
       }
       .category__list :nth-child(#{$a}).menu__item {
-        animation: menu-item-anim 0.6s $menu-item-delay ease-out both;
+        animation: menu-item-anim 0.6s $item-delay ease-out both;
       }
     }
   } 

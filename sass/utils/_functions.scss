@@ -1,4 +1,5 @@
 /* Compute delay depending on element index/position and set delay between each element */
+/* -1 so that the 1st element has no delay applied */
 @function delay($position, $delay) {
   $result: ($position - 1) * $delay;
   @return $result;
