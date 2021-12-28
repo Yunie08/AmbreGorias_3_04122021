@@ -53,13 +53,33 @@
   }
 }
 
+/***** Desktop grid *****/
+.index__grid {
+  @include container-setting($cont-width: 100%);
+  margin: 0 auto;
+  @include desktop {
+    @include container-setting;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+
 /***** Process *****/
 .process {
   @include flex-center;
   @include section-styling;
+  @include desktop {
+    grid-column: 1;
+    align-items: flex-start;
+  }
 
   &__container {
     @include container-setting;
+    @include desktop {
+      position: sticky;
+      top: 20px;
+    }
   }
 
   &__title {
@@ -73,11 +93,8 @@
     padding-left: calc($step-number-size /2);
     @include flex-start(column);
     row-gap: 2.4rem;
-
     @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
-      column-gap: 3%;
+      padding-left: 0;
     }
   }
 
@@ -155,9 +172,17 @@
 .restaurants {
   @include section-styling($bd-color:$neutral-color-light);
   @include flex-center(column);
+  @include desktop {
+    grid-column: 2;
+    background: none;
+  }
 
   &__container {
+    width: 100%;
     @include container-setting;
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -173,10 +198,8 @@
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2%;
     }
-    @include desktop {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    // @include desktop {
+    //   grid-template-columns: repeat(4, 1fr);
+    // }
   }
 }
-
-
