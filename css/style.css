@@ -289,14 +289,19 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
 }
 .card--index {
   height: 65vw;
-  max-height: 37.5vh;
+  max-height: 30vh;
+}
+@media screen and (min-width: 991px) {
+  .card--index {
+    aspect-ratio: 335/251;
+  }
 }
 .card:hover {
   transition: all ease-in-out 250ms;
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card__img {
-  height: 70%;
+  max-height: 70%;
   width: 100%;
   object-fit: cover;
 }
@@ -524,7 +529,7 @@ Animation explanation :
 }
 .footer__container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 .footer__img {
   width: 33%;
@@ -590,7 +595,7 @@ Animation explanation :
 }
 .showcase__container {
   width: 81%;
-  max-width: 1400px;
+  max-width: 1350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -606,6 +611,22 @@ Animation explanation :
   margin: 1.5rem;
 }
 
+/***** Desktop grid *****/
+.index__grid {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 991px) {
+  .index__grid {
+    width: 90%;
+    max-width: 1350px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+
 /***** Process *****/
 .process {
   display: flex;
@@ -616,9 +637,21 @@ Animation explanation :
   background: #fff;
   color: #000;
 }
+@media screen and (min-width: 991px) {
+  .process {
+    grid-column: 1;
+    align-items: flex-start;
+  }
+}
 .process__container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1350px;
+}
+@media screen and (min-width: 991px) {
+  .process__container {
+    position: sticky;
+    top: 20px;
+  }
 }
 .process__title {
   margin-bottom: 3rem;
@@ -637,9 +670,7 @@ Animation explanation :
 }
 @media screen and (min-width: 991px) {
   .process__list {
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 3%;
+    padding-left: 0;
   }
 }
 .process__step {
@@ -727,9 +758,21 @@ Animation explanation :
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 991px) {
+  .restaurants {
+    grid-column: 2;
+    background: none;
+  }
+}
 .restaurants__container {
+  width: 100%;
   width: 90%;
-  max-width: 1400px;
+  max-width: 1350px;
+}
+@media screen and (min-width: 991px) {
+  .restaurants__container {
+    width: 100%;
+  }
 }
 .restaurants__title {
   margin-bottom: 3rem;
@@ -746,11 +789,6 @@ Animation explanation :
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2%;
-  }
-}
-@media screen and (min-width: 991px) {
-  .restaurants__list {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -788,7 +826,7 @@ Animation explanation :
 }
 .menu__header__container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 .menu h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
@@ -806,7 +844,7 @@ Animation explanation :
 }
 .category__wrapper {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 .category__container {
   width: 100%;
