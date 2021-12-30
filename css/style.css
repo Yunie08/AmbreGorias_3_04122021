@@ -623,7 +623,7 @@ Animation explanation :
     max-width: 1350px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 5%;
+    column-gap: 3%;
   }
 }
 
