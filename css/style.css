@@ -289,11 +289,14 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
 }
 .card--index {
   height: 65vw;
-  max-height: 30vh;
+  max-height: 300px;
   min-height: 200px;
 }
 @media screen and (min-width: 991px) {
   .card--index {
+    height: auto;
+    min-height: none;
+    max-height: none;
     aspect-ratio: 335/251;
   }
 }
@@ -302,7 +305,7 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card__img {
-  max-height: 70%;
+  height: 70%;
   width: 100%;
   object-fit: cover;
 }
@@ -310,7 +313,7 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 30%;
+  height: 30%;
   width: 93%;
   margin: auto;
 }
@@ -517,6 +520,11 @@ Animation explanation :
   position: absolute;
   left: 6%;
   top: 45%;
+  border-radius: 0.1rem;
+}
+.header__return:hover i {
+  transform: scale(0.9);
+  transition: transform 200ms ease;
 }
 
 .footer {
