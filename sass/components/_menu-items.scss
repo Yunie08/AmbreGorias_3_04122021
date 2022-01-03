@@ -6,15 +6,19 @@ Animation explanation :
 
 
 @for $i from 1 through 3 {
+  /* delay function caculates delay for categories */
+  $category-delay: delay($i,$menu-category-delay);  
+
+  .category__container :nth-child(#{$i}) {
+    h2 {
+    animation: category-anim 0.8s $category-delay both;
+    }
+  }
   @for $a from 1 through 4 {
-    /* delay function caculates delay for categories and items */
-    $category-delay: delay($i,$menu-category-delay);   
-    $item-delay: calc($category-delay + delay($i,$menu-item-delay)); 
+    /* delay function caculates delay for items */
+    $item-delay: calc($category-delay + delay($a,$menu-item-delay)); 
 
     .category__container :nth-child(#{$i}) {
-      h2 {
-      animation: category-anim 0.8s $category-delay both;
-      }
       .category__list :nth-child(#{$a}).menu__item {
         animation: menu-item-anim 0.6s $item-delay ease-out both;
       }
