@@ -11,7 +11,7 @@ The project consists in developping the front-end part of Ohmyfood! website whic
 
 ### Link
 
-Site URL: [Live website](https://yunie08.github.io/ohmyfood-website/index.html)
+Site URL: [Ohmyfood website](https://yunie08.github.io/ohmyfood-website/index.html)
 
 ### Screenshots
 
