@@ -6,10 +6,12 @@
   background: #fff;
   @include shadow;
   transition: all ease 500ms; 
+
   &--index {
     height: calc(75vw - (100vw - 90vw));
     max-height: 300px;
     min-height: 200px;
+
     @include desktop {
       height: auto;
       min-height: none;
@@ -17,9 +19,9 @@
       aspect-ratio: 335 / 251;
     }
   }
+  
   &:hover {
     transition: all ease-in-out 250ms;
-    // @include shadow(0.3);
     box-shadow: 0 6px 6px 0 rgba(0,0,0,26%), 0 10px 20px 0 rgb(0,0,0,19%);
   }
 
