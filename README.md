@@ -9,28 +9,33 @@ This project is the thrid project from the Openclassrooms Web Developer training
 
 The project consists in developping the front-end part of Ohmyfood! website which allows customers to choose a restaurant and create a custom menu.
 
+### Link
+
+Site URL: [Live website](https://yunie08.github.io/ohmyfood-website/index.html)
+
 ### Screenshots
 
 ![Ohmyfood website Screenshot](./images/screenshots/website-screenshot.png)
 
 
 ### Built with
-
 - Semantic HTML5 markup
 - CSS
 - Sass preprocessor
 - Sass 7-1 architecture 
 - BEM naming convention
-### Evaluated skills
 
+### Evaluated skills
 :heavy_check_mark:  Ensuring website visual consistency  
 :heavy_check_mark:  Using a version control system for project monitoring and website hosting  
 :heavy_check_mark:  Implementing advanced CSS animations  
 :heavy_check_mark:  Setting up your front-end environment  
-:heavy_check_mark:  Creating a website navigation structure  
-## Specifications
+:heavy_check_mark:  Creating a website navigation structure 
 
+
+## Specifications
 This website interface follows the specifications given in a creative brief and a mobile version mockup.
+
 ### Compatibility
 
 - Mobile-first design
@@ -49,9 +54,11 @@ This website interface follows the specifications given in a creative brief and 
 - __Menu pages :__
   - menu items animated appearance
   - added items animation  
+
 ## Specifications
 
 This website interface follows the specifications given in a creative brief and a mobile version mockup.
+
 ### Technologies
 
 :heavy_check_mark:  Allowed: HTML5, CSS, Sass  
