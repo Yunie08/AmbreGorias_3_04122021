@@ -39,4 +39,8 @@
     transition: transform ease-out 200ms, opacity ease-out 200ms;
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
