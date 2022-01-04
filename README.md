@@ -63,9 +63,9 @@ __Colors :__
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primary | ![#9356dc](https://via.placeholder.com/10/9356dc?text=+)| #9356DC |
-| Secondary | ![#ff79da](https://via.placeholder.com/10/ff79da?text=+) | #FF79DA |
-| Tertiary | ![#99e2d0](https://via.placeholder.com/10/99e2d0?text=+) | #99E2D0 |
+| Primary | ![#9356dc](https://via.placeholder.com/10/9356dc?text=+)  #9356DC |
+| Secondary | ![#ff79da](https://via.placeholder.com/10/ff79da?text=+)  #FF79DA |
+| Tertiary | ![#99e2d0](https://via.placeholder.com/10/99e2d0?text=+) #99E2D0 |
 
 __Fonts :__
 
