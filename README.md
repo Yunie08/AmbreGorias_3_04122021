@@ -23,11 +23,11 @@ The project consists in developping the front-end part of Ohmyfood! website whic
 - BEM naming convention
 ### Evaluated skills
 
-:heavy_check_mark:  Ensuring website visual consistency__
-:heavy_check_mark:  Using a version control system for project monitoring and website hosting__
-:heavy_check_mark:  Implementing advanced CSS animations__
-:heavy_check_mark:  Setting up your front-end environment__
-:heavy_check_mark:  Creating a website navigation structure__
+:heavy_check_mark:  Ensuring website visual consistency  
+:heavy_check_mark:  Using a version control system for project monitoring and website hosting  
+:heavy_check_mark:  Implementing advanced CSS animations  
+:heavy_check_mark:  Setting up your front-end environment  
+:heavy_check_mark:  Creating a website navigation structure  
 ## Specifications
 
 This website interface follows the specifications given in a creative brief and a mobile version mockup.
@@ -54,8 +54,8 @@ This website interface follows the specifications given in a creative brief and 
 This website interface follows the specifications given in a creative brief and a mobile version mockup.
 ### Technologies
 
-:heavy_check_mark:  Allowed: HTML5, CSS, Sass__
-:x: Forbidden: Javascript, inline CSS, any framework__
+:heavy_check_mark:  Allowed: HTML5, CSS, Sass  
+:x: Forbidden: Javascript, inline CSS, any framework  
 
 ### Style guide
 
