@@ -42,6 +42,7 @@ This website interface follows the specifications given in a creative brief and 
 - Responsive website for mobile, tablet and desktop
 - HTML and CSS code validated by W3C validator
 - Compatible with Chrome and Firefox latest versions
+
 ### Deliverables
 
 - __Home page :__
@@ -55,14 +56,10 @@ This website interface follows the specifications given in a creative brief and 
   - menu items animated appearance
   - added items animation  
 
-## Specifications
-
-This website interface follows the specifications given in a creative brief and a mobile version mockup.
-
 ### Technologies
 
-:heavy_check_mark:  Allowed: HTML5, CSS, Sass  
-:x: Forbidden: Javascript, inline CSS, any framework  
+:heavy_check_mark:  __Allowed:__ HTML5, CSS, Sass  
+:x: __Forbidden:__ Javascript, inline CSS, any framework  
 
 ### Style guide
 
