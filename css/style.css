@@ -39,6 +39,7 @@ button {
 
 button,
 a {
+  outline: none;
   cursor: pointer;
 }
 
@@ -378,6 +379,9 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   opacity: 1;
   transform: scale(1);
   transition: transform ease-out 200ms, opacity ease-out 200ms;
+}
+.btn--like:focus {
+  outline: none;
 }
 
 /*
