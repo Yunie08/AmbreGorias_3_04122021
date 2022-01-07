@@ -18,14 +18,15 @@
     height: 100%;
     left: 0px;
     top: 0px;
-    background: -webkit-linear-gradient(50deg,#FF79DA 0%,#9356DC 70%, #9356DC 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255,255,255,0);
+    // background: -webkit-linear-gradient(50deg,#FF79DA 0%,#9356DC 70%, #9356DC 100%);
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: rgba(255,255,255,0);
+    color: #FF79DA;
     transform: scale(0);
     opacity: 0;
     transition: opacity ease-out 600ms, transform ease-out 300ms;
-    z-index: 2;
+    z-index: 100;
   }
 
   &:hover {
