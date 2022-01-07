@@ -28,6 +28,7 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input,
@@ -799,25 +800,23 @@ Animation explanation :
   object-fit: cover;
 }
 .menu__content {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: -4rem;
   padding: 4rem 0;
-  background: #fff;
+  background: #F6F6F6;
   color: #000;
   padding-bottom: 8rem;
   border-radius: 4rem 4rem 0 0;
-  background: #F6F6F6;
 }
 .menu__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: calc(4rem - 10%);
+  padding-right: 0.5rem;
 }
 .menu__header__container {
   width: 90%;
@@ -836,10 +835,24 @@ Animation explanation :
 .category {
   margin-top: 4.5rem;
   width: 100%;
+  padding: 0 1rem 2.5rem 1rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .category {
+    overflow: visible;
+    padding: 0;
+  }
 }
 .category__wrapper {
-  width: 90%;
+  width: 98%;
   max-width: 1350px;
+}
+@media screen and (min-width: 768px) {
+  .category__wrapper {
+    width: 90%;
+    max-width: 1350px;
+  }
 }
 .category__container {
   width: 100%;

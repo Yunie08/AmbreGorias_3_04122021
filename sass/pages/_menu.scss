@@ -10,18 +10,16 @@
     object-fit: cover;
   }
   &__content {
-    width: 100%;
     @include flex-center(column);
     margin-top: -1 * $padding-tb-menu;
-    @include section-styling($padding-tb-menu);
+    @include section-styling($padding-tb-menu, $neutral-color-light);
     padding-bottom: 8rem;
     border-radius: $padding-tb-menu $padding-tb-menu 0 0;
-    background: $neutral-color-light;
   }
   
   &__header {
     @include flex-between;
-    padding-right: calc($padding-tb-menu - (100% - $container-width));
+    padding-right: 0.5rem;
     
     &__container {
       @include container-setting;
@@ -45,9 +43,19 @@
 .category {
   margin-top: 4.5rem;
   width: 100%;
+  padding: 0 1rem 2.5rem 1rem;
+  overflow: hidden;
+
+  @include tablet-up {
+    overflow: visible;
+    padding: 0;
+  }
 
   &__wrapper {
-    @include container-setting;
+    @include container-setting($cont-width: 98%);
+    @include tablet-up {
+      @include container-setting;
+    }
   }
   &__container {
     width: 100%;
