@@ -297,8 +297,6 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
 @media screen and (min-width: 991px) {
   .card--index {
     height: auto;
-    min-height: none;
-    max-height: none;
     aspect-ratio: 335/251;
   }
 }
