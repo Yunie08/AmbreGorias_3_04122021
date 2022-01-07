@@ -30,8 +30,10 @@
 
   &:hover {
     i {
-      opacity: 0;
-      transition: opacity ease-in 200ms;
+      // opacity: 0;
+      // transition: opacity ease-in 200ms;
+      color: transparent;
+      transition: color ease-in 200ms;
     }
     &::after {
     opacity: 1;

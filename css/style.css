@@ -371,8 +371,8 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   z-index: 2;
 }
 .btn--like:hover i {
-  opacity: 0;
-  transition: opacity ease-in 200ms;
+  color: transparent;
+  transition: color ease-in 200ms;
 }
 .btn--like:hover::after {
   opacity: 1;
