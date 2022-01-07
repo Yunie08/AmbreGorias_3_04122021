@@ -1,44 +1,32 @@
 .btn--like {
-  padding: 0.5rem;
-  position: relative;
-  z-index: 1;
-  transition: color ease-in 200ms;
-
   i {
     font-size: 2.4rem;
   }
 
-  &::after {
-    @include flex-center;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    content: "\f004";
-    font-size: 2.4rem;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    background: linear-gradient(50deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
+  &--unchecked {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &--checked {
+    opacity: 1;
+    background: linear-gradient(50deg, #FF79DA 0%, #9356DC 80%, #9356DC 100%);
     background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
     transform: scale(0);
-    opacity: 0;
-    transition: opacity ease-out 600ms, transform ease-out 300ms;
+    transition: transform ease-out 200ms;
     z-index: 100;
   }
 
-  &:hover {
-    i {
-      // opacity: 0;
-      // transition: opacity ease-in 200ms;
-      color: transparent;
-      transition: color ease-in 200ms;
-    }
-    &::after {
-    opacity: 1;
-    transform: scale(1);
-    transition: transform ease-out 200ms, opacity ease-out 200ms;
+   &:hover {
+     .btn--like--unchecked {
+       opacity: 0;
+       transition: opacity ease-out 200ms;
+     }
+    .btn--like--checked {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity ease-out 200ms, transform ease-out 200ms;
     }
   }
 

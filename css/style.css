@@ -320,9 +320,6 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
 .card__title {
   margin-bottom: 0.5rem;
 }
-.card i {
-  padding: 1rem;
-}
 .card--new {
   position: relative;
 }
@@ -336,48 +333,33 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 
-.btn--like {
-  padding: 0.5rem;
-  position: relative;
-  z-index: 1;
-  transition: color ease-in 200ms;
-}
 .btn--like i {
   font-size: 2.4rem;
 }
-.btn--like::after {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 2.4rem;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: linear-gradient(50deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%);
+.btn--like--unchecked {
+  opacity: 1;
+  z-index: 1;
+}
+.btn--like--checked {
+  opacity: 1;
+  background: linear-gradient(50deg, #FF79DA 0%, #9356DC 80%, #9356DC 100%);
   background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   transform: scale(0);
-  opacity: 0;
-  transition: opacity ease-out 600ms, transform ease-out 300ms;
+  transition: transform ease-out 200ms;
   z-index: 100;
 }
-.btn--like:hover i {
-  color: transparent;
-  transition: color ease-in 200ms;
+.btn--like:hover .btn--like--unchecked {
+  opacity: 0;
+  transition: opacity ease-out 200ms;
 }
-.btn--like:hover::after {
+.btn--like:hover .btn--like--checked {
   opacity: 1;
   transform: scale(1);
-  transition: transform ease-out 200ms, opacity ease-out 200ms;
+  transition: opacity ease-out 200ms, transform ease-out 200ms;
 }
 .btn--like:focus {
   outline: none;

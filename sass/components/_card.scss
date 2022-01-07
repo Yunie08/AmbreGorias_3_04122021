@@ -42,10 +42,6 @@
     margin-bottom: 0.5rem;
   }
 
-  i {
-    padding: 1rem;
-  }
-
   &--new {
     position: relative;
     &::after {
@@ -58,7 +54,7 @@
       position: absolute;
       top: 1.2rem;
       right: 1.2rem;
-      border-radius: 0.2rem;
+      border-radius: 0.3rem;
     }
   }
 }
