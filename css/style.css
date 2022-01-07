@@ -362,7 +362,7 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   height: 100%;
   left: 0px;
   top: 0px;
-  background: -webkit-linear-gradient(#FF79DA 0%, #9356DC);
+  background: #FF79DA;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
