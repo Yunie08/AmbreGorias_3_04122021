@@ -889,7 +889,7 @@ Animation explanation :
 }
 .menu__item__content:hover i {
   transform: rotate(1turn);
-  transition: transform 400ms;
+  transition: transform 400ms 50ms;
 }
 .menu__item__main {
   display: flex;
