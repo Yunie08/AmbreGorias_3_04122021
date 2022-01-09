@@ -1,17 +1,19 @@
 /*
 Animation explanation :
-- each category appears with a delay depending on their own "child number"
-- each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
+- each category appears with a delay depending on their own "child number" (customizable by changing $menu-category-delay variable) 
+- each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category (customizable by changing $menu-item-delay variable)
+- category titles animation can be enabled/disabled by setting the variable $category-anim-enabled to true or false
 */
 
 
 @for $i from 1 through 3 {
   /* delay function caculates delay for categories */
   $category-delay: delay($i,$menu-category-delay);  
-
-  .category__container :nth-child(#{$i}) {
-    h2 {
-    animation: category-anim 0.8s $category-delay both;
+  @if $menu-category-anim-enabled {
+    .category__container :nth-child(#{$i}) {
+      h2 {
+      animation: category-anim 0.8s $category-delay both;
+      }
     }
   }
   @for $a from 1 through 4 {
