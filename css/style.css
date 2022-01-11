@@ -280,9 +280,7 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
   left: 0;
   opacity: 0;
   transition: all 600ms;
-  z-index: -1;
   background: rgba(255, 255, 255, 0.2);
-  z-index: -1;
 }
 .btn:hover {
   transition: box-shadow ease 250ms;
@@ -379,9 +377,9 @@ Prerequisite : stroke-dasharray and dashoffset must be set at full path length
 
 /*
 Animation explanation :
-- each category appears with a delay depending on their own "child number"
-- each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category
-- category titles animation can be enabled/disabled by setting the variable category-anim-enabled to true or false
+- each category appears with a delay depending on their own "child number" (customizable by changing $menu-category-delay variable) 
+- each menu item appears with a delay depending on both: the nth child number category to which they belong and their own position within this category (customizable by changing $menu-item-delay variable)
+- category titles animation can be enabled/disabled by setting the variable $category-anim-enabled to true or false
 */
 /* delay function caculates delay for categories */
 /* delay function caculates delay for items */
@@ -930,6 +928,14 @@ Animation explanation :
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.menu__order {
+  margin-top: 6rem;
+}
+.menu__order .btn {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
